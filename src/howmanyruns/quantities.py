@@ -5,8 +5,8 @@
   order of two systems flips on a rerun.
 * Q4 :func:`runs_needed`, :func:`fit_se_curve`: runs needed to separate a gap, and the
   run-variance curve ``s_e(p) = kappa p (1 - p)`` it is evaluated on.  The design MDE is
-  :func:`agentstats.mde`; fixed-task reliability is the ``fixed_tasks`` output of
-  :func:`agentstats.d_study`.
+  :func:`howmanyruns.mde`; fixed-task reliability is the ``fixed_tasks`` output of
+  :func:`howmanyruns.d_study`.
 * :func:`plan_second_stage`: a two-stage adaptive design.  After a first pass of a few runs per
   cell, it spends the rest of a fixed per-system budget on the cells whose outcomes disagree
   (Neyman allocation on an add-smoothed estimate of the run SD).
@@ -405,7 +405,7 @@ def runs_needed(
 
     ``criterion="power"`` (default, the headline ``n_r*(d)``): the design MDE of the two-sided
     test at level ``alpha`` with power ``power`` is at most ``d``,
-    ``(z_{1-alpha/2} + z_{power}) SE_diff <= d`` (the same MDE as :func:`agentstats.mde`).
+    ``(z_{1-alpha/2} + z_{power}) SE_diff <= d`` (the same MDE as :func:`howmanyruns.mde`).
     ``criterion="reversal"`` (secondary, ``n_r_rev``): a rerun reverses a true gap ``d`` with
     probability at most ``risk``, ``Phi(-d / SE_diff) <= risk``, i.e. ``z_{1-risk} SE_diff <= d``.
     The reversal criterion is the weaker one: at ``alpha = 0.05``, ``power = 0.8`` the power

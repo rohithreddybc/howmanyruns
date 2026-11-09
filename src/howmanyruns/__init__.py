@@ -1,4 +1,4 @@
-"""agentstats: statistics for LLM agent benchmark results."""
+"""howmanyruns: statistics for LLM agent benchmark results."""
 
 from .bootstrap import CI, bootstrap_ci, iqm, iqm_ci
 from .compare import (
@@ -45,7 +45,7 @@ from .variance import (
     variance_components_single,
 )
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 __all__ = [
     "CI",

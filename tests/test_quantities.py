@@ -17,7 +17,7 @@ import pandas as pd
 import pytest
 from scipy import stats
 
-import agentstats as ast
+import howmanyruns as ast
 from _sim import df_from_array
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -208,7 +208,7 @@ def test_d_study_fixed_tasks_matches_paper_code(ext, key):
 
 
 def test_d_study_fixed_tasks_hand_computed():
-    from agentstats.variance import VarianceComponents
+    from howmanyruns.variance import VarianceComponents
 
     vc = VarianceComponents(0.02, 0.05, 0.01, 0.03, 0, 0, 0, 0, 8, 300, 10)
     ds = ast.d_study(vc, n_t=100, n_r=5)
@@ -625,7 +625,7 @@ def test_plan_second_stage_mean_is_nearly_unbiased_for_binary_runs():
 def test_public_api_exports():
     for name in ("run_disagreement", "reversal_probability", "pair_z", "pair_z_table", "runs_needed", "fit_se_curve", "plan_second_stage"):
         assert name in ast.__all__ and callable(getattr(ast, name))
-    assert ast.__version__ == "0.2.1"
+    assert ast.__version__ == "0.3.0"
 
 
 def test_readme_quickstart_runs():

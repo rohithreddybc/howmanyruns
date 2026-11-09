@@ -1,4 +1,4 @@
-# agentstats
+# howmanyruns
 
 Statistics for LLM agent benchmark results: how noisy is a score, how many runs and tasks a
 claim needs, and whether a reported ranking or gain survives resampling.
@@ -8,8 +8,10 @@ Runtime dependencies: numpy, pandas, scipy. Python >= 3.10.
 ## Install
 
 ```
-pip install agentstats
+pip install howmanyruns
 ```
+
+This package was first named `agentstats`. The PyPI package now called `agentstats` is an unrelated project.
 
 ## Quickstart
 
@@ -17,7 +19,7 @@ Run disagreement `D`, the run share `rho_run` and the number of runs per task ne
 a 2-point gap (the quantities Q1 and Q4 of the accompanying paper), on simulated data:
 
 ```python
-import numpy as np, pandas as pd, agentstats as ag
+import numpy as np, pandas as pd, howmanyruns as ag
 
 rng = np.random.default_rng(0)
 P, T, R = 8, 300, 5                                    # systems, tasks, runs per cell
@@ -54,7 +56,7 @@ Every function states one of two estimands:
 ```python
 import numpy as np
 import pandas as pd
-import agentstats as ast
+import howmanyruns as ast
 
 rng = np.random.default_rng(0)
 rows = []
@@ -81,7 +83,7 @@ print(ast.report(df, n_boot=1000, rng=0))              # markdown reporting card
 Command line:
 
 ```
-agentstats report results.csv --benchmark swe-bench-verified --seed 0
+howmanyruns report results.csv --benchmark swe-bench-verified --seed 0
 ```
 
 (`.parquet` input needs an optional parquet engine such as `pyarrow`, which is not a dependency.)
@@ -136,7 +138,7 @@ enters the verdict.
 If you use this package, please cite the accompanying paper (placeholder until publication):
 
 ```
-Bellibatlu, R. R. and Singh, M. How Many Runs Is Enough? Rerun Noise, Rank Reversals and Run Budgets for LLM Agent Benchmarks. 2026. https://github.com/rohithreddybc/agentstats
+Bellibatlu, R. R. and Singh, M. How Many Runs Is Enough? Rerun Noise and Run Budgets for LLM Agent Benchmarks. 2026. https://github.com/rohithreddybc/howmanyruns
 ```
 
 ## Licence

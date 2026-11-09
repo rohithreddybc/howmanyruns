@@ -284,7 +284,7 @@ def iqm_ci(
     Estimand ``fixed_tasks``: stratified by task, runs resampled within each task by adjusted
     residual resampling (see :func:`bootstrap_ci`); this is the rliable-style stratified
     bootstrap with the small-``R`` variance correction.  Requires a balanced system (equal runs
-    per task); use :func:`agentstats.balance` first.  For binary 0/1 scores the IQM is a
+    per task); use :func:`howmanyruns.balance` first.  For binary 0/1 scores the IQM is a
     degenerate summary.
     """
     level = check_level(level)

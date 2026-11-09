@@ -132,7 +132,7 @@ def variance_components(df: pd.DataFrame) -> VarianceComponents:
     """ANOVA expected-mean-squares variance components for the crossed p x t x r:(pt) design.
 
     Requires balanced input (every system has every task with the same number of runs); call
-    :func:`agentstats.balance` first.  Negative estimates are truncated at 0 and flagged in
+    :func:`howmanyruns.balance` first.  Negative estimates are truncated at 0 and flagged in
     ``truncated``.  See the module docstring for the estimators.  On 0/1 scores this is a
     linear-probability decomposition.  Estimand: population-level components (see
     :func:`d_study` for how they map to ``fixed_tasks`` / ``task_population`` quantities).
@@ -168,7 +168,7 @@ def variance_components_single(df: pd.DataFrame, system_id: str) -> VarianceComp
     ``sigma2_run = MS_within`` and ``sigma2_task = (MS_between - MS_within) / n_r`` (truncated at
     0 with a flag); ``ICC(1) = sigma2_task / (sigma2_task + sigma2_run)``.  Requires an equal
     number (>= 2) of runs on every task of the system and >= 2 tasks (use
-    :func:`agentstats.balance`).  Estimand: population components; ``sigma2_task`` includes no
+    :func:`howmanyruns.balance`).  Estimand: population components; ``sigma2_task`` includes no
     run noise.  On 0/1 scores this is a linear-probability decomposition.
     """
     df = prep(df)

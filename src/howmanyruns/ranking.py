@@ -105,7 +105,7 @@ def rank_stability(
     recomputes each system's mean and re-ranks.  Estimand ``task_population``: tasks resampled
     with replacement; ``scheme="cluster"`` (default) keeps each task's runs, ``"two_level"`` also
     resamples runs within tasks (conservative).  Estimand ``fixed_tasks``: runs resampled within
-    tasks (adjusted residual resampling, see :func:`agentstats.bootstrap_ci`).  Every system must
+    tasks (adjusted residual resampling, see :func:`howmanyruns.bootstrap_ci`).  Every system must
     be evaluated on every task (runs per cell may differ).
 
     Bias warning: the reference is the *full-data* ranking, which is itself noisy, so the

@@ -1,4 +1,4 @@
-"""Command line interface: ``agentstats report path.csv|path.parquet [--benchmark B] [--seed S]``."""
+"""Command line interface: ``howmanyruns report path.csv|path.parquet [--benchmark B] [--seed S]``."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ def _read(path: Path) -> pd.DataFrame:
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(prog="agentstats", description=__doc__)
+    parser = argparse.ArgumentParser(prog="howmanyruns", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     rp = sub.add_parser("report", help="print a markdown reporting card")
     rp.add_argument("path", type=Path)
@@ -47,7 +47,7 @@ def main(argv=None) -> int:
                 raise ValueError(f"no rows for benchmark {args.benchmark!r}")
         print(report(df, n_boot=args.n_boot, rng=args.seed))
     except (ValueError, OSError) as e:
-        print(f"agentstats: error: {e}", file=sys.stderr)
+        print(f"howmanyruns: error: {e}", file=sys.stderr)
         return 2
     return 0
 

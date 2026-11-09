@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from scipy import stats
 
-import agentstats as ast
+import howmanyruns as ast
 from _sim import df_from_array
 
 Z = stats.norm.ppf(0.975) + stats.norm.ppf(0.8)

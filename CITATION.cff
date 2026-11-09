@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use agentstats, please cite the paper below."
-title: "agentstats"
-version: 0.2.1
+message: "If you use howmanyruns, please cite the paper below."
+title: "howmanyruns"
+version: 0.3.0
 license: MIT
-repository-code: "https://github.com/rohithreddybc/agentstats"
+repository-code: "https://github.com/rohithreddybc/howmanyruns"
 authors:
   - family-names: Bellibatlu
     given-names: Rohith Reddy
@@ -12,7 +12,7 @@ authors:
     given-names: Manpreet
 preferred-citation:
   type: article
-  title: "How Many Runs Is Enough? Rerun Noise, Rank Reversals and Run Budgets for LLM Agent Benchmarks"
+  title: "How Many Runs Is Enough? Rerun Noise and Run Budgets for LLM Agent Benchmarks"
   authors:
     - family-names: Bellibatlu
       given-names: Rohith Reddy

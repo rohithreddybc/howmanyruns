@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-import agentstats as ast
-from agentstats.variance import VarianceComponents
+import howmanyruns as ast
+from howmanyruns.variance import VarianceComponents
 from _sim import bernoulli_tasks_df, df_from_array, simulate_crossed
 
 SPEC = dict(s_p=0.02, s_t=0.05, s_pt=0.01, s_e=0.03)

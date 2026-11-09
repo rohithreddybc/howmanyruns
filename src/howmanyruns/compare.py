@@ -116,7 +116,7 @@ def paired_diff(
       the per-task mean differences (exact enumeration when <= 15 tasks, otherwise ``n_boot``
       random sign vectors with the +1 correction).
     * Estimand ``fixed_tasks``: CI from adjusted residual resampling of runs within tasks
-      (see :func:`agentstats.bootstrap_ci`; ``scheme`` ignored); p-value from a
+      (see :func:`howmanyruns.bootstrap_ci`; ``scheme`` ignored); p-value from a
       run-level permutation test in which the pooled runs of both systems are re-labelled at
       random within each task (``n_boot`` permutations, +1 correction).
 

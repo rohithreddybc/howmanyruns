@@ -4,8 +4,8 @@ import pandas as pd
 import pytest
 from scipy import stats
 
-import agentstats as ast
-from agentstats.ranking import _ordinal_ranks, _tau_from_ranks
+import howmanyruns as ast
+from howmanyruns.ranking import _ordinal_ranks, _tau_from_ranks
 from _sim import bernoulli_tasks_df
 
 
@@ -247,7 +247,7 @@ def test_rerun_model_calibrated_flag_and_warning():
 
 
 def test_rerun_model_from_variance_components():
-    from agentstats.variance import VarianceComponents
+    from howmanyruns.variance import VarianceComponents
 
     def vc(s_p, s_pt=0.01):
         d = dict(sigma2_p=s_p, sigma2_t=0.05, sigma2_pt=s_pt, sigma2_e=0.03)

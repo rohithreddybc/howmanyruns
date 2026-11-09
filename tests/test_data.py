@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-import agentstats as ast
+import howmanyruns as ast
 from _sim import df_from_array
 
 

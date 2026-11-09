@@ -63,8 +63,8 @@ def system_pass_k(df: pd.DataFrame, system_id: str, k: int, kind: str = "pass_at
     """Mean over tasks of per-task pass@k (``kind="pass_at_k"``) or pass^k (``"pass_hat_k"``).
 
     Scores must be binary (0/1) and every task needs at least ``k`` runs (use
-    :func:`agentstats.balance`).  Estimand: point estimate of the task-averaged quantity; for
-    uncertainty bootstrap with :func:`agentstats.bootstrap_ci` on a per-task transform.
+    :func:`howmanyruns.balance`).  Estimand: point estimate of the task-averaged quantity; for
+    uncertainty bootstrap with :func:`howmanyruns.bootstrap_ci` on a per-task transform.
     """
     if kind not in ("pass_at_k", "pass_hat_k"):
         raise ValueError("kind must be 'pass_at_k' or 'pass_hat_k'")

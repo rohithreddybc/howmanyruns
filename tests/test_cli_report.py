@@ -4,8 +4,8 @@ import sys
 import numpy as np
 import pytest
 
-import agentstats as ast
-from agentstats.cli import main
+import howmanyruns as ast
+from howmanyruns.cli import main
 from _sim import bernoulli_tasks_df
 
 
@@ -50,7 +50,7 @@ def test_cli_is_reproducible_and_benchmark_filter(tmp_path, capsys):
 def test_cli_as_module(tmp_path):
     p = tiny_csv(tmp_path)
     proc = subprocess.run(
-        [sys.executable, "-m", "agentstats", "report", str(p), "--n-boot", "100"],
+        [sys.executable, "-m", "howmanyruns", "report", str(p), "--n-boot", "100"],
         capture_output=True, text=True, timeout=120,
     )
     assert proc.returncode == 0, proc.stderr

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 - 2026-11-06
+
+Changed
+- Renamed the distribution, import package and command from `agentstats` to `howmanyruns`, because the PyPI name `agentstats` belongs to an unrelated project. Replace `import agentstats` with `import howmanyruns`. No change in behaviour. Earlier versions were released only on GitHub, never on PyPI.
+
 ## 0.2.1 - 2026-10-31
 
 Added
